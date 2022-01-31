@@ -1,0 +1,321 @@
+<div class="alert alert-light mt-4 text-white" role="alert">
+  A simple light alert—check it out!
+</div>
+<section class="section-content padding-y bg" *ngIf="cart" [hidden]="purchase"> 
+  <div class="container-fluid">
+    <div class="card">
+      <div class="row no-gutters">
+        <aside class="col-md-6">
+          <article class="gallery-wrap">
+            <div class="img-big-wrap pt-3">
+              <lib-ngx-image-zoom
+              [thumbImage]=url
+              [fullImage]=url
+              [magnification]="1"
+              [enableScrollZoom]="true"
+              [enableLens]="true"
+              [lensWidth]="100"
+          ></lib-ngx-image-zoom>
+            </div>
+            <!-- img-big-wrap.// -->
+            <div class="thumbs-wrap">
+              <a  class="item-thumb btn" (click)="permut()">
+                <img
+                  src="{{url1}}"
+              /></a>
+              <a class="item-thumb btn" (click)="permut1()">
+                <img
+                  src="{{url2}}"
+              /></a>
+            </div>
+            <!-- thumbs-wrap.// -->
+          </article>
+          <!-- gallery-wrap .end// -->
+        </aside>
+        <main class="col-md-6 border-left">
+          <article class="content-body">
+            <h2 class="title">Off-White Odsy-1000 Low-Top Sneakers</h2>
+
+            <div class="rating-wrap my-3">
+              <ul class="rating-stars">
+                <li style="width: 80%" class="stars-active">
+                  <img
+                    src="bootstrap-ecommerce-html/images/icons/stars-active.svg"
+                    alt=""
+                  />
+                </li>
+                <li>
+                  <img
+                    src="bootstrap-ecommerce-html/images/icons/starts-disable.svg"
+                    alt=""
+                  />
+                </li>
+              </ul>
+              <small class="label-rating text-muted">132 reviews</small>
+              <small class="label-rating text-success">
+                <i class="fa fa-clipboard-check"></i> 154 orders
+              </small>
+            </div>
+            <!-- rating-wrap.// -->
+
+            <div class="mb-3">
+              <var class="price h4">${{ cart.price }}</var>
+              <span class="text-muted">/per kg</span>
+            </div>
+
+            <p>
+              {{ cart.description }}
+            </p>
+
+            <dl class="row">
+              <dt class="col-sm-3">Model#</dt>
+              <dd class="col-sm-9">Odsy-1000</dd>
+
+              <dt class="col-sm-3">Color</dt>
+              <dd class="col-sm-9">Brown</dd>
+
+              <dt class="col-sm-3">Delivery</dt>
+              <dd class="col-sm-9">Russia, USA, and Europe</dd>
+            </dl>
+
+            <hr />
+            <div class="row">
+              <div class="form-group col-md flex-grow-0">
+                <label>Quantity</label>
+                <div class="input-group mb-3 input-spinner">
+                  <input
+                    type="number"
+                    min="1"
+                    max="10"
+                    class="form-control p-2"
+                    name="cart.quantity"
+                    [(ngModel)]="cart.quantity"
+                    value="cart.quantity"
+                  />
+                </div>
+              </div>
+              <!-- col.// -->
+              <div class="form-group col-md">
+                <label>Select size</label>
+                <div class="mt-2">
+                  <label
+                    class="custom-control custom-radio custom-control-inline"
+                  >
+                    <input
+                      type="radio"
+                      name="select_size"
+                      checked=""
+                      class="custom-control-input"
+                    />
+                    <div class="custom-control-label">Small</div>
+                  </label>
+
+                  <label
+                    class="custom-control custom-radio custom-control-inline"
+                  >
+                    <input
+                      type="radio"
+                      name="select_size"
+                      class="custom-control-input"
+                    />
+                    <div class="custom-control-label">Medium</div>
+                  </label>
+
+                  <label
+                    class="custom-control custom-radio custom-control-inline"
+                  >
+                    <input
+                      type="radio"
+                      name="select_size"
+                      class="custom-control-input"
+                    />
+                    <div class="custom-control-label">Large</div>
+                  </label>
+                </div>
+              </div>
+              <!-- col.// -->
+            </div>
+            <!-- row.// -->
+            <a class="btn btn-warning" (click)="directPurchase(cart)">
+              Buy now
+            </a>
+            <a (click)="addToCart(cart)" class="btn btn-outline-info ml-2">
+              <span class="text">Add to cart</span>
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+          </article>
+          <!-- product-info-aside .// -->
+        </main>
+        <!-- col.// -->
+      </div>
+      <!-- row.// -->
+    </div>
+    <!-- card.// -->
+    <!-- ============================ COMPONENT 1 END .// ================================= -->
+  </div>
+</section>
+
+<!-- ============================ Comment.// ================================= -->
+<div class="container-fluid" [hidden]="purchase">
+  <div class="d-flex justify-content-center row">
+    <div class="d-flex flex-column col-md-12">
+      <div
+        class="
+          d-flex
+          flex-row
+          align-items-center
+          text-left
+          comment-top
+          p-2
+          bg-white
+          border-bottom
+          px-4
+        "
+      >
+        <div class="profile-image">
+          <img
+            class="rounded-circle"
+            src="https://i.imgur.com/06EM6Iy.jpg"
+            width="70"
+          />
+        </div>
+        <div
+          class="
+            d-flex
+            flex-column-reverse flex-grow-0
+            align-items-center
+            votings
+            ml-1
+          "
+        >
+          <i class="fa fa-sort-up fa-2x hit-voting"></i><span>127</span
+          ><i class="fa fa-sort-down fa-2x hit-voting"></i>
+        </div>
+        <div class="d-flex flex-column ml-3">
+          <div class="d-flex flex-row post-title">
+            <h5>Is sketch 3.9.1 stable?</h5>
+            <span class="ml-2">(Jesshead)</span>
+          </div>
+          <div
+            class="
+              d-flex
+              flex-row
+              align-items-center align-content-center
+              post-title
+            "
+          >
+            <span class="bdge mr-1">video</span
+            ><span class="mr-2 comments">13 comments&nbsp;</span
+            ><span class="mr-2 dot"></span><span>6 hours ago</span>
+          </div>
+        </div>
+      </div>
+      <div class="coment-bottom bg-white p-2 px-4">
+        <div class="d-flex flex-row add-comment-section mt-4 mb-4">
+          <img
+            class="img-fluid img-responsive rounded-circle mr-2"
+            src="https://i.imgur.com/KLeobJk.jpg"
+            width="38"
+          /><input
+            type="text"
+            class="form-control mr-3"
+            placeholder="Add comment"
+          /><button class="btn btn-primary" type="button">Comment</button>
+        </div>
+        <div class="collapsable-comment">
+          <div
+            class="
+              d-flex
+              flex-row
+              justify-content-between
+              align-items-center
+              action-collapse
+              p-2
+            "
+            data-toggle="collapse"
+            aria-expanded="false"
+            aria-controls="collapse-1"
+            href="#collapse-1"
+          >
+            <span>Comments</span><i class="fa fa-chevron-down servicedrop"></i>
+          </div>
+          <div id="collapse-1" class="collapse">
+            <div class="commented-section mt-2">
+              <div class="d-flex flex-row align-items-center commented-user">
+                <h5 class="mr-2">Corey oates</h5>
+                <span class="dot mb-1"></span
+                ><span class="mb-1 ml-2">4 hours ago</span>
+              </div>
+              <div class="comment-text-sm">
+                <span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.</span
+                >
+              </div>
+              <div class="reply-section">
+                <div class="d-flex flex-row align-items-center voting-icons">
+                  <i class="fa fa-sort-up fa-2x mt-3 hit-voting"></i
+                  ><i class="fa fa-sort-down fa-2x mb-3 hit-voting"></i
+                  ><span class="ml-2">10</span><span class="dot ml-2"></span>
+                  <h6 class="ml-2 mt-1">Reply</h6>
+                </div>
+              </div>
+            </div>
+            <div class="commented-section mt-2">
+              <div class="d-flex flex-row align-items-center commented-user">
+                <h5 class="mr-2">Samoya Johns</h5>
+                <span class="dot mb-1"></span
+                ><span class="mb-1 ml-2">5 hours ago</span>
+              </div>
+              <div class="comment-text-sm">
+                <span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna
+                  aliqua..</span
+                >
+              </div>
+              <div class="reply-section">
+                <div class="d-flex flex-row align-items-center voting-icons">
+                  <i class="fa fa-sort-up fa-2x mt-3 hit-voting"></i
+                  ><i class="fa fa-sort-down fa-2x mb-3 hit-voting"></i
+                  ><span class="ml-2">15</span><span class="dot ml-2"></span>
+                  <h6 class="ml-2 mt-1">Reply</h6>
+                </div>
+              </div>
+            </div>
+            <div class="commented-section mt-2">
+              <div class="d-flex flex-row align-items-center commented-user">
+                <h5 class="mr-2">Makhaya andrew</h5>
+                <span class="dot mb-1"></span
+                ><span class="mb-1 ml-2">10 hours ago</span>
+              </div>
+              <div class="comment-text-sm">
+                <span
+                  >Nunc sed id semper risus in hendrerit gravida rutrum. Non
+                  odio euismod lacinia at quis risus sed. Commodo ullamcorper a
+                  lacus vestibulum sed arcu non odio euismod. Enim facilisis
+                  gravida neque convallis a. In mollis nunc sed id. Adipiscing
+                  elit pellentesque habitant morbi tristique senectus et netus.
+                  Ultrices mi tempus imperdiet nulla malesuada
+                  pellentesque.</span
+                >
+              </div>
+              <div class="reply-section">
+                <div class="d-flex flex-row align-items-center voting-icons">
+                  <i class="fa fa-sort-up fa-2x mt-3 hit-voting"></i
+                  ><i class="fa fa-sort-down fa-2x mb-3 hit-voting"></i
+                  ><span class="ml-2">25</span><span class="dot ml-2"></span>
+                  <h6 class="ml-2 mt-1">Reply</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-orders [hidden]="!purchase"></app-orders>

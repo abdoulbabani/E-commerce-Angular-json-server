@@ -1,0 +1,271 @@
+.gallery-wrap .img-big-wrap {
+  margin-bottom: 10px;
+  border-radius: 0.37rem;
+  overflow: hidden;
+  background-color: #fff;
+}
+.gallery-wrap .img-big-wrap a {
+  text-align: center;
+  display: block;
+}
+.gallery-wrap .img-big-wrap img {
+  height: 450px;
+  width: auto;
+  display: inline-block;
+  cursor: zoom-in;
+}
+.gallery-wrap .thumbs-wrap {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.gallery-wrap .thumbs-wrap .item-thumb {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin: 3px;
+  display: inline-block;
+  overflow: hidden;
+}
+.gallery-wrap .thumbs-wrap img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: zoom-in;
+}
+.gallery-wrap .thumbs-wrap img:hover {
+  -webkit-filter: brightness(1.1);
+  filter: brightness(1.1);
+  cursor: zoom-in;
+}
+
+.item-option-select {
+  margin-bottom: 1rem;
+  display: inline-block;
+  margin-right: 15px;
+}
+.item-option-select .btn {
+  min-width: 80px;
+}
+
+.rating-stars {
+  display: inline-block;
+  vertical-align: middle;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  white-space: nowrap;
+  clear: both;
+}
+.rating-stars i {
+  font-size: 14px;
+  color: #ccc;
+  display: inline;
+}
+.rating-stars img {
+  height: 14px;
+  max-width: none;
+}
+.rating-stars li {
+  display: block;
+  text-overflow: clip;
+  white-space: nowrap;
+  z-index: 1;
+}
+.rating-stars li.stars-active {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.rating-stars li.stars-active i {
+  color: orange;
+}
+.rating-stars.stars-lg img {
+  height: 20px;
+  max-width: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.img-wrap {
+  text-align: center;
+  display: block;
+}
+.img-wrap img {
+  max-width: 100%;
+}
+
+.icon-wrap {
+  text-align: center;
+  display: inline-block;
+}
+
+.price-wrap {
+  letter-spacing: -0.7px;
+}
+
+.input-spinner {
+  width: 125px;
+  flex-wrap: nowrap;
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.padding-y {
+  padding-top: 10px;
+}
+
+.padding-y-lg {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.padding-y-sm {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+/* ========================
+INCLUDE STYLES AND COMPONENTS
+===================== */
+/* ================== HELPERS  =================== */
+
+a:hover {
+  text-decoration: none;
+}
+
+.img-wrap {
+  text-align: center;
+  display: block;
+}
+.img-wrap img {
+  max-width: 100%;
+}
+
+.icon-wrap {
+  text-align: center;
+  display: inline-block;
+}
+
+.price-wrap {
+  letter-spacing: -0.7px;
+}
+
+.content-body {
+  flex: 1 1 auto;
+  padding: 2rem 2.3rem;
+}
+.btn-icon i {
+  line-height: 1;
+}
+
+.btn-light {
+  background-color: #fff;
+  border-color: #e4e4e4;
+}
+.btn-light i {
+  color: #969696;
+}
+.btn-light:hover {
+  background-color: #fff;
+  border-color: #989898;
+}
+
+.btn .text + i {
+  margin-left: 10px;
+}
+.btn i + .text {
+  margin-left: 10px;
+}
+
+section {
+  display: block;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.input-spinner {
+  width: 125px;
+  flex-wrap: nowrap;
+  display: inline-flex;
+  vertical-align: middle;
+}
+.input-spinner input.form-control {
+  text-align: center;
+  max-width: 46px;
+  font-weight: bold;
+  flex-basis: 46px;
+  border-color: #e4e4e4;
+  flex-grow: 0;
+}
+.input-spinner .btn {
+  width: 42px;
+  text-align: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+/* ========================
+INCLUDE STYLES COMMENTS
+===================== */
+/* ==================COMMENTS=================== */
+body {
+  background: #eee;
+}
+
+.bdge {
+  height: 21px;
+  background-color: orange;
+  color: #fff;
+  font-size: 11px;
+  padding: 8px;
+  border-radius: 4px;
+  line-height: 3px;
+}
+
+.comments {
+  text-decoration: underline;
+  text-underline-position: under;
+  cursor: pointer;
+}
+
+.dot {
+  height: 7px;
+  width: 7px;
+  margin-top: 3px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.hit-voting:hover {
+  color: blue;
+}
+
+.hit-voting {
+  cursor: pointer;
+}
+
+.servicedrop {
+  transition-delay: 1s;
+}
+
+.action-collapse {
+  cursor: pointer;
+}
+@media (min-width: 576px) {
+  .mt-4 {
+    margin-top: 0 !important;
+  }
+  .mt-5 {
+    margin-top: 0 !important;
+  }
+}

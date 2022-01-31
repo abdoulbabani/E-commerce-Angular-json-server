@@ -1,0 +1,195 @@
+<ng-container *ngIf="!payementMake">
+ 
+  <div class="container-fluid mt-3 mb-5">
+    <div class="row">
+      <div class="col-75">
+        <div class="container-form">
+          <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+            <div class="row">
+              <div class="col-50">
+                <h3>Billing Address</h3>
+
+                <label for="adr"
+                  ><i class="fa fa-address-card-o"></i> Address</label
+                >
+                <input
+                  type="text"
+                  id="adr"
+                  name="address"
+                  placeholder="542 W. 15th Street"
+                  ngModel
+                  required
+                />
+                <label for="city"><i class="fa fa-institution"></i> City</label>
+                <input
+                  type="text"
+                  id="city"
+                  name="city"
+                  placeholder="New York"
+                  ngModel
+                  required
+                />
+              </div>
+
+              <div class="col-50">
+                <h3>Payment</h3>
+                <label for="fname">Accepted Cards</label>
+                <div class="icon-container">
+                  <i
+                    class="fab fa-cc-visa d-inline-block"
+                    style="color: blue"
+                  ></i>
+                  <i
+                    class="fab fa-cc-amex d-inline-block pl-3"
+                    style="color: blue"
+                  ></i>
+                  <i
+                    class="fab fa-cc-mastercard d-inline-block pl-3"
+                    style="color: red"
+                  ></i>
+                  <i
+                    class="fab fa-cc-discover d-inline-block pl-3"
+                    style="color: orange"
+                  ></i>
+                </div>
+
+                <label for="ccnum">Credit card number</label>
+                <input
+                  type="text"
+                  id="ccnum"
+                  name="cardnumber"
+                  placeholder="1111-2222-3333-4444"
+                  required
+                />
+                <label for="expmonth">Exp Month</label>
+                <input
+                  type="text"
+                  id="expmonth"
+                  name="expmonth"
+                  placeholder="September"
+                  required
+                />
+
+                <div class="row">
+                  <div class="col-50">
+                    <label for="expyear">Exp Year</label>
+                    <input
+                      type="text"
+                      id="expyear"
+                      name="expyear"
+                      placeholder="2018"
+                      ngModel
+                      required
+                    />
+                  </div>
+                  <div class="col-50">
+                    <label for="cvv">CVV</label>
+                    <input
+                      type="text"
+                      id="cvv"
+                      name="cvv"
+                      placeholder="352"
+                      ngModel
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <label>
+              <input
+                type="checkbox"
+                checked="checked"
+                name="sameadr"
+                ngModel
+                required
+              />
+              Shipping address same as billing
+            </label>
+            <input
+              type="submit"
+              value="Continue to checkout"
+              [disabled]="f.invalid"
+              class="btn"
+            />
+          </form>
+        </div>
+      </div>
+
+      <div class="col-25">
+        <div class="container" *ngIf="!nobasket">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Cart</th>
+                <th><i class="fa fa-shopping-cart"></i></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let cart of carts">
+                <td>{{ cart.name }}</td>
+                <td>{{ cart.quantity }}</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <hr />
+          <p>
+            Total
+            <span class="price" style="color: black"
+              ><b>€{{ total }}</b></span
+            >
+          </p>
+        </div>
+        <div class="container" *ngIf="nobasket">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Products</th>
+                <th>Quantite</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{ nobasket.name }}</td>
+                <td>{{ nobasket.quantity }}</td>
+              </tr>
+            </tbody>
+          </table>
+          <hr />
+          <p>
+            Total
+            <span class="price" style="color: black"
+              ><b>€{{ total }}</b></span
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+<ng-container *ngIf="payementMake">
+  <div class="container" style="margin-top: 100px">
+    <div class="columns">
+      <ul class="price">
+        <li
+          class="header"
+          role="alert"
+          class="alert alert-success"
+          style="margin-bottom: 1px"
+        >
+          <strong>Congratulation!</strong> you have just made a purchase. meet
+          in 3 days at {{ addresse }}, town of {{ city }}.
+          <strong>Bill is</strong>
+        </li>
+        <li class="grey" style="color: #c0392b">
+          Total amount: ${{ total }} With shipping
+        </li>
+        <li>{{ newDate | date: "yyyy-MM-dd hh:mm" }}</li>
+        <li class="grey" style="cursor: pointer; color: #fff">
+          <a class="button" (click)="finich()">Finished</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</ng-container>

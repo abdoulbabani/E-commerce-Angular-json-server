@@ -1,0 +1,110 @@
+<!--Section: Block Content-->
+<div class="row">
+  <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+    <div class="container-fluid">
+      <div id="demo" class="carousel slide carousel-fade" data-ride="carousel">
+        <!-- Indicateurs -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+
+        <!-- Carrousel -->
+        <div class="carousel-inner">
+          <div
+            class="carousel-item active"
+            data-interval="4000"
+            style="max-height: 400px"
+          >
+            <img
+              src="https://cap.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fcap.2F2020.2F11.2F24.2Fd6bdb937-d587-4c35-af98-bee9daef8bb7.2Ejpeg/1200x630/background-color/ffffff/quality/70/cr/wqkgUGV4ZWxzIC8gQ0FQSVRBTA%3D%3D/macbook-air-20-de-remise-sur-le-pc-portable-apple-a-la-fnac-1386763.jpg"
+              alt="Carrousel slide 1 Responsive image"
+              class="d-block w-100"
+            />
+          </div>
+          <div
+            class="carousel-item"
+            data-interval="2000"
+            style="max-height: 400px"
+          >
+            <img
+              src="https://images.frandroid.com/wp-content/uploads/2020/06/apple-macbook-air-2020-test-37.jpg"
+              alt="Carrousel slide 2 Responsive image"
+              class="d-block w-100"
+            />
+          </div>
+          <div
+            class="carousel-item"
+            data-interval="1000"
+            style="max-height: 400px"
+          >
+            <img
+              src="https://img.freepik.com/photos-gratuite/developpement-web-femme-ecrit-programme-ecran-ordinateur-portable_37282-274.jpg?size=626&ext=jpg"
+              alt="Carrousel slide 3 Responsive image"
+              class="d-block w-100"
+            />
+          </div>
+        </div>
+
+        <!-- Contrôles -->
+        <a
+          class="carousel-control-prev"
+          href="#demo"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Précédent</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#demo"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Suivant</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Section: Block Content-->
+
+<!--card-product -->
+
+<div class="container-fluide m-3">
+  <div class="row" *ngIf="products">
+    <!-- col.// -->
+
+    <div class="col-md-3" *ngFor="let product of products">
+      <figure class="card card-product-grid">
+        <a class="img-wrap btn" (click)="SingleProduct(product.id)">
+          <img src="{{ product.pictureUrl }}" />
+        </a>
+        <figcaption class="info-wrap">
+          <a class="title text-dark btn" (click)="SingleProduct(product.id)">{{
+            product.name
+          }}</a>
+          <div class="mt-2">
+            <var class="price">{{ product.price }}</var>
+            <!-- price-wrap.// -->
+            <a
+              class="btn btn-sm color-button text-white float-right"
+              (click)="addToCart(product)"
+              >Add to cart <i class="fa fa-shopping-cart"></i
+            ></a>
+          </div>
+          <!-- action-wrap.end -->
+        </figcaption>
+      </figure>
+      <!-- card // -->
+    </div>
+
+    <!-- action-wrap.end -->
+  </div>
+</div>
+
+<!-- end card-product -->

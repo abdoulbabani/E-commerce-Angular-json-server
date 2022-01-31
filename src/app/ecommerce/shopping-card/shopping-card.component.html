@@ -1,0 +1,133 @@
+<div class="alert alert-light mt-4 text-light" role="alert">
+  A simple light alert—check it out!
+</div>
+<div class="container-fluid mt-5" [hidden]="carts.length != 0">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card border border-white">
+        <div class="card-header border border-white bg-white">
+          <h5>Chariot (0 éléments)</h5>
+        </div>
+        <div class="card-body cart">
+          <div class="col-sm-12 empty-cart-cls text-center">
+            <img
+              src="https://media.istockphoto.com/vectors/shopping-cart-icon-isolated-on-white-background-vector-id1206806317?k=20&m=1206806317&s=170667a&w=0&h=kEh5VLsTHukWc7xf2BvUs8ssqS_d7vkK0-xU3MDpO7s="
+              width="130"
+              height="130"
+              class="img-fluid mb-4 mr-3"
+            />
+            <h3><strong>Your Cart is Empty</strong></h3>
+            <h4>Add something to make me happy :)</h4>
+            <a
+              href="#"
+              class="btn btn-warning cart-btn-transform m-3"
+              data-abc="true"
+              [routerLink]="['/dashboard']"
+              >continue shopping</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid mb-4 mt-5" [hidden]="carts.length == 0">
+  <div class="row">
+    <div class="col-12 col-sm-12 col-md-12">
+      <div class="table-responsive table-bordered">
+        <table class="table table-striped">
+          <thead class="card-header">
+            <tr class="text-center">
+              <th colspan="6">baba</th>
+            </tr>
+            <tr>
+              <th scope="col">picture</th>
+              <th scope="col">Product</th>
+
+              <th scope="col" class="text-center">Price</th>
+              <th scope="col" class="text-right">Quantity</th>
+              <th class="text-center">Delete</th>
+            </tr>
+          </thead>
+          <tbody class="card-body">
+            <tr *ngFor="let cart of carts">
+              <td>
+                <img
+                  class="img-responsive h-25 w-25 center"
+                  src="{{ cart.pictureUrl }}"
+                />
+              </td>
+              <td>{{ cart.name }}</td>
+              <td>{{ cart.price }}</td>
+              <td>
+                <input
+                  class="form-control"
+                  type="number"
+                  name="cart.quantity"
+                  value="cart.quantity"
+                  [(ngModel)]="cart.quantity"
+                  (change)="changer()"
+                />
+              </td>
+
+              <td class="text-right">
+                <button
+                  class="btn btn-sm btn-danger"
+                  (click)="removeCart(cart.id)"
+                >
+                  <i class="fa fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Sub-Total</td>
+              <td class="text-right">{{ subTotal }}</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Shipping</td>
+              <td class="text-right">{{ Shipping }}€</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><strong>Total</strong></td>
+              <td class="text-right">
+                <strong>{{ Total }}</strong>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-6">
+          <button class="btn btn-warning w-100" [routerLink]="['/dashboard']">
+            Continue Shopping
+          </button>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 text-right">
+          <button class="btn btn-success w-100" (click)="chectOut(carts)">
+            Checkout
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

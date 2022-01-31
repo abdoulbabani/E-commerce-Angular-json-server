@@ -1,0 +1,122 @@
+@charset "UTF-8";
+/* ==== BASE STYLES ====*/
+/* ==================== GLOBAL STYLES ======================= */
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+}
+
+/* ================== HELPERS  =================== */
+a:hover {
+  text-decoration: none;
+}
+
+.img-wrap {
+  text-align: center;
+  display: block;
+}
+.img-wrap img {
+  max-width: 100%;
+}
+
+.icon-wrap {
+  text-align: center;
+  display: inline-block;
+}
+
+.price-wrap {
+  letter-spacing: -0.7px;
+}
+
+.content-body {
+  flex: 1 1 auto;
+  padding: 2 rem 2.3rem;
+}
+
+.card-product-grid {
+  margin-bottom: 20px;
+}
+.card-product-grid .img-wrap {
+  border-radius: 0.2rem 0.2rem 0 0;
+  height: 220px;
+}
+.card-product-grid .info-wrap {
+  overflow: hidden;
+  padding: 18px 20px;
+}
+
+[class*="card-product"] p {
+  margin-bottom: 0;
+}
+[class*="card-product"] .img-wrap {
+  overflow: hidden;
+  position: relative;
+}
+[class*="card-product"] .img-wrap img {
+  height: 100%;
+  max-width: 100%;
+  width: auto;
+  display: inline-block;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+/* GRID STYLE PRODUCT ITEM */
+.card-product-grid {
+  margin-bottom: 20px;
+}
+.card-product-grid .img-wrap {
+  border-radius: 0.2rem 0.2rem 0 0;
+  height: 220px;
+}
+.card-product-grid .info-wrap {
+  overflow: hidden;
+  padding: 18px 20px;
+}
+.card-product-grid .bottom-wrap {
+  padding: 18px;
+  border-top: 1px solid #e4e4e48e;
+}
+.card-product-grid .topbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  left: 0;
+  text-align: initial;
+  padding: 10px 15px;
+}
+.card-product-grid .topbar a {
+  color: black;
+}
+.card-product-grid .topbar a:hover {
+  background-color: yellow;
+}
+.card-product-grid .fix-height {
+  height: 80px;
+  overflow: hidden;
+}
+.card-product-grid .btn-overlay {
+  transition: 0.5s;
+  opacity: 0;
+  left: 0;
+  bottom: 0;
+  color: #fff;
+  width: 100%;
+  padding: 5px 0;
+  text-align: center;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+}
+.card-product-grid:hover .btn-overlay {
+  opacity: 1;
+}
+.card-product-grid:hover {
+  box-shadow: 0 4px 15px rgba(153, 153, 153, 0.3);
+  transition: 0.3s;
+}
+
+.item-slide .card-product-grid {
+  margin-bottom: 0;
+}

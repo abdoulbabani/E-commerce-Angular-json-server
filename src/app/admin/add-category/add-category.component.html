@@ -1,0 +1,79 @@
+<div class="container">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Categorie</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Library</li>
+    </ol>
+  </nav>
+  <div class="row">
+    <div class="col-lg-3">
+      <div class="card" style="width: 17rem">
+        <div class="card-body">
+          <h6 class="card-title">ADD Categorie</h6>
+
+          <form>
+            <div class="form-group">
+              <input
+                type="password"
+                class="form-control"
+                id="exampleInputPassword1"
+                placeholder="New Category"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-9 margin">
+      <div class="card">
+        <div class="container" [hidden]="showcontainer">
+          <div class="card-body">All Categories</div>
+          <table class="table table-light">
+            <tbody>
+              <tr>
+                <th class="text-justify" scope="row" colspan="3">
+                  <a (click)="toggle()" class="btn">Categorie produit</a>
+                </th>
+                <td class="text-right">
+                  <i class="bi bi-trash btn"></i>
+                </td>
+              </tr>
+              <tr>
+                <th class="text-justify" scope="row" colspan="3">
+                  <a (click)="toggle()" class="btn">categorie produit</a>
+                </th>
+                <td class="text-right">
+                  <i class="bi bi-trash btn"></i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="container" [hidden]="!showcontainer">
+          <div class="card-body">Product by Categories</div>
+          <table class="table table-light">
+            <tbody>
+              <tr>
+                <th class="text-justify" scope="row" colspan="3">
+                  <a (click)="toggle()" class="btn">produit par categorie</a>
+                </th>
+                <td class="text-right">
+                  <i class="bi bi-trash btn"></i>
+                </td>
+              </tr>
+              <tr>
+                <th class="text-justify" scope="row" colspan="3">
+                  <a (click)="toggle()" class="btn">produits par categorie</a>
+                </th>
+                <td class="text-right">
+                  <i class="bi bi-trash btn"></i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

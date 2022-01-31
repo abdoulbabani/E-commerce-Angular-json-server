@@ -1,0 +1,103 @@
+<div id="logreg-forms">
+  <form
+    [formGroup]="formLogin"
+    class="form-signin"
+    [ngClass]="status ? 'd-none' : 'd-block'"
+    (ngSubmit)="Login()"
+  >
+    <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">
+      Sign in
+    </h1>
+    <div class="alert alert-success">
+      <strong>Success!</strong> 
+    </div>
+    <input
+      type="email"
+      id="inputEmail"
+      class="form-control"
+      placeholder="Email address"
+      required=""
+      autofocus=""
+      formControlName="email"
+    />
+    <input
+      type="password"
+      id="inputPassword"
+      class="form-control"
+      placeholder="Password"
+      required=""
+      formControlName="password"
+    />
+
+    <button class="btn btn-block btn-info text-white" type="submit">
+      <i class="fas fa-sign-in-alt"></i> Sign in
+    </button>
+
+    <hr />
+    <!-- <p>Don't have an account!</p>  -->
+    <button
+      class="btn btn-warning btn-block"
+      type="button"
+      (click)="toggleSignUp()"
+      id="signup"
+    >
+      <i class="fas fa-user-plus"></i> Sign up New Account
+    </button>
+  </form>
+
+  <form
+    action="/signup/"
+    class="form-signup"
+    [ngClass]="status ? 'd-block' : 'd-none'"
+    [formGroup]="formRegister"
+    (ngSubmit)="register()"
+  >
+  <div class="alert alert-success">
+    <strong>Success!</strong> 
+  </div>
+    <input
+      type="text"
+      id="username"
+      class="form-control"
+      placeholder="Full name"
+      required=""
+      autofocus=""
+      formControlName="username"
+    />
+    <input
+      type="email"
+      id="user-email"
+      class="form-control"
+      placeholder="Email address"
+      required
+      autofocus=""
+      formControlName="email"
+    />
+    <input
+      type="password"
+      id="user-pass"
+      class="form-control"
+      placeholder="Password"
+      required
+      autofocus=""
+      formControlName="password"
+    />
+    <input
+      type="password"
+      id="user-repeatpass"
+      class="form-control"
+      placeholder="Repeat Password"
+      required
+      autofocus=""
+      formControlName="Repassword"
+    />
+
+    <button class="btn btn-block btn-info text-white" type="submit">
+      <i class="fas fa-user-plus"></i> Sign Up
+    </button>
+    <a id="cancel_signup" (click)="toggleSignUp()"
+      ><i class="fas fa-angle-left"></i> Back</a
+    >
+  </form>
+  <br />
+</div>

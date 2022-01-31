@@ -1,0 +1,181 @@
+<div class="container">
+  <div class="row justify-content-between no-gutters mb-2">
+    <div class="col-lg-3">
+      <!-- Search form -->
+      <div class="md-form mt-0">
+        <input
+          class="form-control"
+          type="text"
+          placeholder="Search"
+          aria-label="Search"
+        />
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <button
+        type="button"
+        class="btn btn-primary float-right"
+        data-toggle="modal"
+        data-target="#exampleModal"
+        data-whatever="@fat"
+      >
+        Add User
+      </button>
+    </div>
+  </div>
+  <table class="table table-bordered table-responsive-sm">
+    <thead>
+      <tr>
+        <th scope="col" class="text-center">Idusers</th>
+        <th scope="col" class="text-center">username</th>
+        <th scope="col" class="text-center">email</th>
+        <th scope="col" class="text-center">password</th>
+        <th scope="col" class="text-center">telephone</th>
+        <th scope="col" class="text-center">adresse</th>
+        <th scope="col" class="text-center">Datecreation</th>
+        <th scope="col" class="text-center">DateUpdate</th>
+        <th scope="col" class="text-center">city</th>
+        <th scope="col" class="text-center">delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.iduser }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.password }}</td>
+        <td>{{ user.telephone }}</td>
+        <td>{{ user.address }}</td>
+        <td>{{ user.createdAt }}</td>
+        <td>{{ user.updatedAt }}</td>
+        <td class="text-center">
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#staticBackdrop"
+            class="btn btn-primary btn-sm"
+            style="max-width: 70px"
+          >
+            Update
+          </button>
+        </td>
+        <td class="text-center"><i class="bi bi-trash btn"></i></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">ADD New product</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Name:</label>
+            <input type="text" class="form-control" id="recipient-name" />
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label"
+              >Description:</label
+            >
+            <input type="text" class="form-control" id="recipient-name" />
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">URl:</label>
+            <input type="text" class="form-control" id="recipient-name" />
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Prix:</label>
+            <input type="text" class="form-control" id="recipient-name" />
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label"
+              >Categorie:</label
+            >
+            <input type="text" class="form-control" id="recipient-name" />
+          </div>
+
+          <button type="submit" class="btn btn-primary" data-dismiss="modal">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!--updatate-->
+
+<div
+  class="modal fade"
+  id="staticBackdrop"
+  data-backdrop="static"
+  data-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Update</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Name:</label>
+            <input type="text" class="form-control" id="recipient-name" />
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label"
+              >Description:</label
+            >
+            <input type="text" class="form-control" id="recipient-name" />
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">URl:</label>
+            <input type="text" class="form-control" id="recipient-name" />
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Prix:</label>
+            <input type="text" class="form-control" id="recipient-name" />
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label"
+              >Categorie:</label
+            >
+            <input type="text" class="form-control" id="recipient-name" />
+          </div>
+
+          <button type="submit" class="btn btn-primary" data-dismiss="modal">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

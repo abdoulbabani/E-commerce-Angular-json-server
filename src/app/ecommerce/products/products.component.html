@@ -1,0 +1,37 @@
+<div class="alert alert-light mt-4 text-light" role="alert">
+  A simple light alert—check it out!
+</div>
+<div class="container-fluide ml-3 mr-3 mt-5">
+  <div class="row" *ngIf="products">
+    <!-- col.// -->
+
+    <div class="col-md-3" *ngFor="let product of products">
+      <figure class="card card-product-grid">
+        <a href="#" class="img-wrap">
+          <img
+            src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4rC5j?ver=595b&q=90&m=6&h=405&w=720&b=%23FFFFFFFF&l=f&o=t&aim=true"
+          />
+        </a>
+        <figcaption class="info-wrap">
+          <a href="#" class="title text-dark"
+            >Fjällräven Kånken Backpack Blue Ridge</a
+          >
+          <div class="mt-2">
+            <var class="price">$84.00</var>
+            <!-- price-wrap.// -->
+            <a href="#" class="btn btn-sm btn-info float-right"
+              >Add to cart <i class="fa fa-shopping-cart"></i
+            ></a>
+          </div>
+          <!-- action-wrap.end -->
+        </figcaption>
+      </figure>
+      <!-- card // -->
+    </div>
+    <!-- col.// -->
+  </div>
+</div>
+
+<!-- nuvcard // -->
+
+<!-- card-product .// -->

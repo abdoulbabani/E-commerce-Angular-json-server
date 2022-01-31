@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files
+background-color: #f0fff0; #f2f0ffd6 #6495ed #add8e6 #f2f0ffd6
+   //json-server --watch db.json -m ./node_modules/json-server-auth,*/
+   
+body {
+  background-color: #f2f0ffd6;
+}
+
+.color-button {
+  background-color: #03224c;
+}
