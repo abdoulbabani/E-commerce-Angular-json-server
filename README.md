@@ -53,16 +53,16 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ![login](https://user-images.githubusercontent.com/68701658/151730347-ddfa7051-c174-45f7-bfa8-0f7fac865570.png)
 
 
-![card](https://user-images.githubusercontent.com/68701658/151730384-17ee20a3-ccd0-427d-b966-94393e3fd6cb.png)
-
-
-![Capture d’écran 2022-01-31 à 03 27 20](https://user-images.githubusercontent.com/68701658/151731101-5327ebfc-80a1-4a56-9fb6-51d05ee5399e.png)
-
-
 ![Capture d’écran 2022-01-31 à 03 12 34](https://user-images.githubusercontent.com/68701658/151730470-255f70da-66ca-43b7-96f3-3da9bc87ab59.png)
 
 
 ![paiement](https://user-images.githubusercontent.com/68701658/151730409-6b73ab27-94be-439b-b4ea-277b369fa1b3.png)
+
+
+![card](https://user-images.githubusercontent.com/68701658/151730384-17ee20a3-ccd0-427d-b966-94393e3fd6cb.png)
+
+
+![Capture d’écran 2022-01-31 à 03 27 20](https://user-images.githubusercontent.com/68701658/151731101-5327ebfc-80a1-4a56-9fb6-51d05ee5399e.png)
 
 
 ![Capture d’écran 2022-01-31 à 03 27 46](https://user-images.githubusercontent.com/68701658/151731129-757fa8fe-c6c6-47cc-9c67-0c18ec71ef58.png)
